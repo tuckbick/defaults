@@ -20,6 +20,9 @@ time, mark, audio, video {
 	vertical-align: baseline;
 	position: relative;
 	box-sizing: border-box;
+	   -moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	        background-clip: padding-box;
 }
 html {
 	font-size: 10px; 
@@ -34,6 +37,11 @@ body {
 ol, ul {
 	list-style: none;
 }
+img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9; /* ie8 */
+}
 
 
 
@@ -41,6 +49,9 @@ ol, ul {
 
 /* SCAFFOLDING */
 
+.wrapper {
+	margin: 0 auto;
+}
 .row {
 	width: 100%;
 	*zoom: 1;
@@ -123,10 +134,23 @@ a:hover {
 }
 
 
-
-
-
 /* MEDIA QUERIES */
+
+@media only screen and (min-width: 960px) {
+
+	.wrapper {
+		width: 960px;
+	}
+
+}
+
+@media only screen and (max-width: 960px) {
+
+	.wrapper {
+		width: 100%;
+	}
+
+}
 
 /* iPhone [portrait + landscape] */
 @media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
