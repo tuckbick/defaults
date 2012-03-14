@@ -93,7 +93,7 @@ img {
 	font-face: http://www.fontsquirrel.com/fontface/generator
 	more: http://css3please.com/
 
-/* some boilerplating */
+/* some optional boilerplating */
 a {
 	text-decoration: none;
 	border-bottom: 1px dotted #DF4E70;
@@ -104,7 +104,7 @@ a:hover {
 	color: #39C5BC;
 }
 
-/* some awesome */
+/* some optional awesome */
 .wrapper {
 	max-width: 960px;
 }
