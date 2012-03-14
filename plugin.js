@@ -34,7 +34,7 @@
         this.$element.trigger('show')
 
         privateFn.call(this, function() {
-          // callback
+          // this is your callback
         })
 
       }
@@ -59,7 +59,7 @@
   function privateFn( callback ) {
     var that = this;
 
-    // cats.scramble()
+    // do things that private fns do
 
     callback()
   }
@@ -79,9 +79,7 @@
   }
 
   $.fn.plugin.defaults = {
-      cats: true
-    , dogs: true
-    , chaos: true
+
   }
 
   $.fn.plugin.Constructor = Plugin

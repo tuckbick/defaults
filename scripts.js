@@ -1,6 +1,7 @@
 var util = {
 
 	fns : {
+		// a few util fns for extreme hacking
 		forceRepaint: function(el) {
 			el = $(el)
 			var n = document.createTextNode(' ')
@@ -17,7 +18,7 @@ var util = {
 	},
 
 	home : function() {
-		// cats.fluff()
+		// show twitter feed
 	}
 
 }
