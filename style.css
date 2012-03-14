@@ -93,6 +93,7 @@ img {
 	font-face: http://www.fontsquirrel.com/fontface/generator
 	more: http://css3please.com/
 
+
 /* some optional boilerplating */
 a {
 	text-decoration: none;
@@ -103,6 +104,7 @@ a:hover {
 	border-bottom: 1px solid #39C5BC;
 	color: #39C5BC;
 }
+
 
 /* some optional awesome */
 .wrapper {
@@ -118,44 +120,31 @@ a:hover {
 
 
 
-
 /* ANIMATIONS */
 
-@-webkit-keyframes spin{
- 	from {
-	 	-webkit-transform: rotate(0deg)
-	}
-	to {
-		-webkit-transform:rotate(360deg)
-	}
+@-webkit-keyframes spin {
+ 	from { -webkit-transform: rotate(0deg)   }
+	  to { -webkit-transform: rotate(360deg) }
 }
-@-moz-keyframes spin{
- 	from {
-	 	-moz-transform: rotate(0deg)
-	}
-	to {
-		-moz-transform:rotate(360deg)
-	}
+@-moz-keyframes spin {
+ 	from { -moz-transform: rotate(0deg)   }
+	  to { -moz-transform: rotate(360deg) }
 }
-@-ms-keyframes spin{
- 	from {
-	 	-ms-transform: rotate(0deg)
-	}
-	to {
-		-ms-transform:rotate(360deg)
-	}
+@-ms-keyframes spin {
+ 	from { -ms-transform: rotate(0deg)   }
+	  to { -ms-transform: rotate(360deg) }
 }
 
 
 /* MEDIA QUERIES */
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 768px) {
 
 
 
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
 
 
 
@@ -163,8 +152,6 @@ a:hover {
 
 /* iPhone [portrait + landscape] */
 @media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
-
-
 
 
 
