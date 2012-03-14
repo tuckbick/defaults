@@ -27,13 +27,14 @@
       }
 
     , show: function () {
-        if (this.isShown) return
+        var self = this
 
-        var that = this
-        this.isShown = true
-        this.$element.trigger('show')
+        if (self.isShown) return
 
-        privateFn.call(this, function() {
+        self.isShown = true
+        self.$element.trigger('show')
+
+        privateFn.call(self, function() {
           // this is your callback
         })
 
@@ -41,13 +42,12 @@
 
     , hide: function ( e ) {
         e && e.preventDefault()
+        var self = this
 
-        if (!this.isShown) return
+        if (!self.isShown) return
 
-        var that = this
-        this.isShown = false
-
-        this.$element.trigger('show')
+        self.isShown = false
+        self.$element.trigger('show')
         
       }
   }
@@ -57,7 +57,7 @@
   * ===================== */
 
   function privateFn( callback ) {
-    var that = this;
+    var self = this;
 
     // do things that private fns do
 
