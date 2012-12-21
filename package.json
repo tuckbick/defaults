@@ -1,0 +1,11 @@
+{
+  "name": "build",
+  "preferGlobal": "true",
+  "version": "0.3.0",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-mincss": "~0.3.2",
+    "grunt-contrib-htmlmin": "~0.1.0",
+    "grunt-contrib-imagemin": "~0.1.0"
+  }
+}
