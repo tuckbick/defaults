@@ -11,16 +11,27 @@ module.exports = function(grunt) {
       dev: {
         options: {
           appDir: "app/",
-          baseUrl: "public/js/",
+          baseUrl: "public/js",
           dir: "app-dev-build",
           optimizeCss: "none",
           optimize: "none",
           paths: {
               "jquery": "lib/jquery",
+              "hogan": "lib/hogan",
               "templates": "templates",
               "underscore": "lib/underscore",
               "json2": "lib/json2",
               "backbone": "lib/backbone"
+          },
+          shim: {
+            'backbone': {
+                deps: ['underscore', 'jquery','json2'],
+                exports: 'Backbone'
+            },
+            'templates': {
+                deps: ['hogan'],
+                exports: 'templates'
+            }
           },
           name: "app"
         }
@@ -37,12 +48,23 @@ module.exports = function(grunt) {
           },
           paths: {
               "jquery": "lib/jquery",
+              "hogan": "lib/hogan",
               "templates": "templates",
               "underscore": "lib/underscore",
               "json2": "lib/json2",
               "backbone": "lib/backbone"
           },
-          name: "app",
+          shim: {
+            'backbone': {
+                deps: ['underscore', 'jquery','json2'],
+                exports: 'Backbone'
+            },
+            'templates': {
+                deps: ['hogan'],
+                exports: 'templates'
+            }
+          },
+          name: "app"
         }
       }
     },
@@ -74,17 +96,17 @@ module.exports = function(grunt) {
 
     watch: {
       dev: {
-        files: ["app/public/js/*","app/public/scss/*"],
+        files: ["app/views/partials/*.hjs", "app/public/js/*","app/public/scss/*"],
         tasks: 'dev'
       },
       prod: {
-        files: ["app/public/js/*","app/public/scss/*"],
+        files: ["app/views/partials/*.hjs", "app/public/js/*","app/public/scss/*"],
         tasks: 'prod'
       },
       default: {
-        files: ["app/public/js/*","app/public/scss/*"],
+        files: ["app/views/partials/*.hjs", "app/public/js/*","app/public/scss/*"],
         tasks: 'default'
-      },
+      }
     }
 
   });
